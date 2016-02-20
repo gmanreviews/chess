@@ -25,6 +25,15 @@ namespace chess.Models
     }
     public class usergroup_model
     {
+        /// <summary>
+        /// update function to actually check db
+        /// </summary>
+        /// <param name="permission"></param>
+        /// <returns></returns>
+        public bool test_permissions(permission permission)
+        {
+            return true;
+        }
 
     }
 

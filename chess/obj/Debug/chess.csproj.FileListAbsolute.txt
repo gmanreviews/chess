@@ -80,3 +80,6 @@ c:\users\gmanreviews\documents\visual studio 2015\Projects\chess\chess\bin\Micro
 c:\users\gmanreviews\documents\visual studio 2015\Projects\chess\chess\obj\Debug\chess.csprojResolveAssemblyReference.cache
 c:\users\gmanreviews\documents\visual studio 2015\Projects\chess\chess\obj\Debug\chess.dll
 c:\users\gmanreviews\documents\visual studio 2015\Projects\chess\chess\obj\Debug\chess.pdb
+C:\Users\gmanreviews\Documents\Visual Studio 2015\Projects\chess\chess\bin\BCrypt.Net.dll
+C:\Users\gmanreviews\Documents\Visual Studio 2015\Projects\chess\chess\bin\BCrypt.Net.pdb
+C:\Users\gmanreviews\Documents\Visual Studio 2015\Projects\chess\chess\bin\BCrypt.Net.xml

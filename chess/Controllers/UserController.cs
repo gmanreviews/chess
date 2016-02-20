@@ -17,14 +17,22 @@ namespace chess.Controllers
 
         public ActionResult LoginForm()
         {
-            user_model.get_all_users();
             return View(new user());
         }
 
         [HttpPost]
         public ActionResult LoginForm(user user)
         {
-            return View(user);
+            if (user_model.login_authenticate(user))
+            {
+                return RedirectToAction("Index", "User");
+            }
+            else
+            {
+                ModelState.AddModelError("error.error", "Bad login");
+                user.password = null;
+                return View(user);
+            }
         }
     }
 }

@@ -8,11 +8,12 @@ namespace chess.Models
 {
     public class user
     {
-        private int id;
+        public int id;
         public string username;
-        private string password;
+        public string password;
         public string email;
         public person person;
+        public List<usergroup> usergroups;
 
         public user() { }
         public user(int id)
@@ -40,9 +41,31 @@ namespace chess.Models
             {
                 users.Add(new user(int.Parse(reader["id"].ToString())));
             }
+            reader.Close();
             db.disconnect();
             return users;
         }
+
+        private static string get_password(user user)
+        {
+            db db = new db();
+            db.connect();
+            SqlDataReader reader = db.query_db("EXEC get_user_password " + user.id + ",'" + user.username + "'");
+            while (reader.Read())
+            {
+                if ((bool)reader["success"])  user.password = reader["password"].ToString();
+            }
+            reader.Close();
+            db.disconnect();
+            return user.password;
+        }
+
+        public static bool login_authenticate(user user)
+        {
+            if (user.password == null || get_password(user) == null) return false;
+            else return bcrypt.test_password(user.password, get_password(user));
+        }
+
     }
 
 }
