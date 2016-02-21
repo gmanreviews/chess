@@ -7,8 +7,8 @@ namespace chess.Models
 {
     public class chess_note
     {
-        private int id;
-        public string note;
+        private int id { get; set; }
+        public string note { get; set; }
 
         public chess_note() { }
         public chess_note(int id)

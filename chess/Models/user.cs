@@ -8,12 +8,12 @@ namespace chess.Models
 {
     public class user
     {
-        public int id;
-        public string username;
-        public string password;
-        public string email;
-        public person person;
-        public List<usergroup> usergroups;
+        public int id {get; set;}
+        public string username { get; set; }
+        public string password { get; set; }
+        public string email { get; set; }
+        public person person { get; set; }
+        public List<usergroup> usergroups { get; set; }
 
         public user() { }
         public user(int id)

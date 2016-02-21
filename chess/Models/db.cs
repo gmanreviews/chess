@@ -31,10 +31,10 @@ namespace chess.Models
 
                 if (this.connection.State == System.Data.ConnectionState.Closed) this.connect();
                 SqlCommand sql_cmd = new SqlCommand();
-                sql_cmd.CommandText = clean_query(query);
+                //sql_cmd.CommandText = clean_query(query);
+                sql_cmd.CommandText = query;
                 sql_cmd.Connection = this.connection;
                 SqlDataReader result = sql_cmd.ExecuteReader();
-                //this.disconnect();
                 return result;   
             }
             catch (Exception e)

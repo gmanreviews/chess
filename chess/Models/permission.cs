@@ -7,12 +7,12 @@ namespace chess.Models
 {
     public class permission
     {
-        private int id;
-        public string permission_name;
-        public bool create;
-        public bool read;
-        public bool update;
-        public bool delete;
+        private int id { get; set; }
+        public string permission_name { get; set; }
+        public bool create { get; set; }
+        public bool read { get; set; }
+        public bool update { get; set; }
+        public bool delete { get; set; }
 
         public permission() { }
         public permission(int id)

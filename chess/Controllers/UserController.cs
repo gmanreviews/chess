@@ -41,9 +41,9 @@ namespace chess.Controllers
         }
 
         [HttpPost]
-        public ActionResult signup(user user)
+        public ActionResult signup(user return_user)//, string username, string password)
         {
-            user_model.add_user(user);
+            user_model.add_user(return_user);
             return RedirectToAction("Index", "Home");
         }
     }

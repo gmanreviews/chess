@@ -8,10 +8,10 @@ namespace chess.Models
 {
     public class person
     {
-        public int id;
-        public string first_name;
-        public string last_name;
-        public string country;
+        public int id { get; set; }
+        public string first_name { get; set; }
+        public string last_name { get; set; }
+        public string country { get; set; }
     }
     public class person_model
     {
