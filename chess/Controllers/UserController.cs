@@ -34,5 +34,17 @@ namespace chess.Controllers
                 return View(user);
             }
         }
+
+        public ActionResult signup()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult signup(user user)
+        {
+            user_model.add_user(user);
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

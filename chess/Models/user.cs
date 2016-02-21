@@ -66,6 +66,31 @@ namespace chess.Models
             else return bcrypt.test_password(user.password, get_password(user));
         }
 
+        public static user add_user(user user)
+        {
+            try {
+                user.person = person_model.add_person(user.person);
+                db db = new db();
+                db.connect();
+                SqlDataReader reader = db.query_db("EXEC create_user '" + user.username + "','"
+                                                                        + bcrypt.encrypt(user.password) + "','"
+                                                                        + user.email + "',"
+                                                                        + user.person.id);
+                while (reader.Read())
+                {
+                    if ((bool)reader["success"]) user.id = int.Parse(reader["result"].ToString());
+                    else throw new Exception("username not unique");
+                }
+                reader.Close();
+                db.disconnect();
+                return user;
+            }
+            catch (Exception)
+            {
+                return user;
+            }
+        }
+
     }
 
 }
