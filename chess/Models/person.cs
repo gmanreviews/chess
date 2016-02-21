@@ -3,14 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
+using System.ComponentModel.DataAnnotations;
 
 namespace chess.Models
 {
     public class person
     {
         public int id { get; set; }
+        [Required]
+        [Display(Name = "First Name")]
         public string first_name { get; set; }
+        [Required]
+        [Display(Name = "Last Name")]
         public string last_name { get; set; }
+        [Required]
+        [Display(Name = "Country")]
         public string country { get; set; }
     }
     public class person_model

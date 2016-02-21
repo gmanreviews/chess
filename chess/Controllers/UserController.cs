@@ -41,10 +41,24 @@ namespace chess.Controllers
         }
 
         [HttpPost]
-        public ActionResult signup(user return_user)//, string username, string password)
+        public ActionResult signup(user user)
         {
-            user_model.add_user(return_user);
-            return RedirectToAction("Index", "Home");
+            if (ModelState.IsValid)
+            {
+                user_model.add_user(user);
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                ModelState.AddModelError("error.error", "Something's wrong with the data you put in");
+                user = user_model.remove_passwords(user);
+                return View(user);
+            }
+        }
+
+        public ActionResult user_type_dropdown()
+        {
+            return RedirectToAction("user_type_dropdown", "usertype");
         }
     }
 }

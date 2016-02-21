@@ -3,17 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
+using System.ComponentModel.DataAnnotations;
 
 namespace chess.Models
 {
     public class user
     {
+        [Required]
         public int id {get; set;}
+        [Display(Name = "Username")]
+        [Required]
         public string username { get; set; }
+        [Required]
+        [Display(Name = "Password")]
         public string password { get; set; }
+        [Display(Name = "Verify Password")]
+        public string password2 { get; set; }
+        [Display(Name = "E-Mail")]
         public string email { get; set; }
         public person person { get; set; }
         public List<usergroup> usergroups { get; set; }
+        [Display(Name = "User Type")]
+        public user_type user_type { get; set; }
 
         public user() { }
         public user(int id)
@@ -69,6 +80,7 @@ namespace chess.Models
         public static user add_user(user user)
         {
             try {
+                if ((user.password != user.password2) && user.password2 != null && user.password2 != "") throw new Exception("passwords don't match");
                 user.person = person_model.add_person(user.person);
                 db db = new db();
                 db.connect();
@@ -89,6 +101,13 @@ namespace chess.Models
             {
                 return user;
             }
+        }
+
+        public static user remove_passwords(user user)
+        {
+            user.password = null;
+            user.password2 = null;
+            return user;
         }
 
     }

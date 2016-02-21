@@ -202,6 +202,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UserTypeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -215,8 +216,10 @@
     <Compile Include="Models\note.cs" />
     <Compile Include="Models\permission.cs" />
     <Compile Include="Models\person.cs" />
+    <Compile Include="Models\session.cs" />
     <Compile Include="Models\user.cs" />
     <Compile Include="Models\usergroup.cs" />
+    <Compile Include="Models\user_type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -246,6 +249,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="sql\populate_data.sql" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -266,9 +270,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\User\LoginForm.cshtml" />
     <Content Include="Views\User\signup.cshtml" />
+    <Content Include="Views\UserType\user_type_dropdown.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\my_scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
