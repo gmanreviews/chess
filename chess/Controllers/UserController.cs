@@ -55,10 +55,6 @@ namespace chess.Controllers
                 return View(user);
             }
         }
-
-        public ActionResult user_type_dropdown()
-        {
-            return RedirectToAction("user_type_dropdown", "usertype");
-        }
+        
     }
 }

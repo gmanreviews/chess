@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
+using System.ComponentModel.DataAnnotations;
 
 namespace chess.Models
 {
     public class user_type
     {
         public int id { get; set; }
+        [Display(Name = "User Type Code")]
         public string type_code { get; set; }
+        [Display(Name = "User Type")]
         public string type_desc { get; set; }
 
         public user_type() { }
