@@ -216,6 +216,8 @@
     <Compile Include="Models\note.cs" />
     <Compile Include="Models\permission.cs" />
     <Compile Include="Models\person.cs" />
+    <Compile Include="Models\post.cs" />
+    <Compile Include="Models\post_category.cs" />
     <Compile Include="Models\session.cs" />
     <Compile Include="Models\user.cs" />
     <Compile Include="Models\usergroup.cs" />
