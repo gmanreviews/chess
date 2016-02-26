@@ -10,6 +10,7 @@ namespace chess.Models
     public class post
     {
         public int id { get; set; }
+        public user user_created { get; set; }
         public string title { get; set; }
         public DateTime date_created { get; set;}
         public DateTime date_published { get; set; }
