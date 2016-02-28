@@ -1,0 +1,3 @@
+﻿@model IEnumerable<chess.Models.post_category>
+
+@Html.DropDownList("post_category_dropdown", Model.Select(x => new SelectListItem { Value = x.id.ToString(), Text = x.category }))

@@ -201,6 +201,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PostCategoryController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\UserTypeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -240,14 +241,40 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\index.html" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery-ui.structure.css" />
+    <Content Include="Scripts\jquery-ui.structure.min.css" />
+    <Content Include="Scripts\jquery-ui.theme.css" />
+    <Content Include="Scripts\jquery-ui.theme.min.css" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery_ui\external\jquery\jquery.js" />
+    <Content Include="Scripts\jquery_ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="Scripts\jquery_ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="Scripts\jquery_ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="Scripts\jquery_ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="Scripts\jquery_ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Scripts\jquery_ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery_ui\index.html" />
+    <Content Include="Scripts\jquery_ui\jquery-ui.css" />
+    <Content Include="Scripts\jquery_ui\jquery-ui.js" />
+    <Content Include="Scripts\jquery_ui\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery_ui\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery_ui\jquery-ui.structure.css" />
+    <Content Include="Scripts\jquery_ui\jquery-ui.structure.min.css" />
+    <Content Include="Scripts\jquery_ui\jquery-ui.theme.css" />
+    <Content Include="Scripts\jquery_ui\jquery-ui.theme.min.css" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\my_scripts\category_auto_fill.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -273,10 +300,11 @@
     <Content Include="Views\User\LoginForm.cshtml" />
     <Content Include="Views\User\signup.cshtml" />
     <Content Include="Views\UserType\user_type_dropdown.cshtml" />
+    <Content Include="Views\PostCategory\dropdown.cshtml" />
+    <Content Include="Views\PostCategory\auto_fill.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\my_scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
