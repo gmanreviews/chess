@@ -214,7 +214,7 @@
     <Compile Include="Models\game.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\note.cs" />
+    <Compile Include="Models\chess_note.cs" />
     <Compile Include="Models\permission.cs" />
     <Compile Include="Models\person.cs" />
     <Compile Include="Models\post.cs" />
