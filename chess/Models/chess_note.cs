@@ -11,6 +11,7 @@ namespace chess.Models
         public int id { get; set; }
         public string note { get; set; }
         public user author { get; set; }
+        public bool important { get; set; }
 
         public chess_note() { }
         public chess_note(int id)
